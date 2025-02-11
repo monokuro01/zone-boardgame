@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZONE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>ZONE</h1>
+    <div class="controls">
+        <button id="undo-btn">Undo</button>
+        <button id="pass-btn">Pass</button>
+        <button id="reset-btn">Reset</button>
+    </div>
+
+    <div class="board" id="board"></div>
+
+    <div id="game-result" style="display: none;">
+        <h2 id="result-text"></h2>
+    </div>
+
+    <div class="captured">
+    <div>Red captured: <span id="captured-red">0</span></div>
+    <div>Blue captured: <span id="captured-blue">0</span></div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
